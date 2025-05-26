@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -32,26 +31,26 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "raviteja.yarramsetti@example.com",
-      href: "mailto:raviteja.yarramsetti@example.com"
+      value: "tejuyarram2812@gmail.com",
+      href: "mailto:tejuyarram2812@gmail.com"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 9876543210",
-      href: "tel:+919876543210"
+      value: "7075577516",
+      href: "tel:7075577516"
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
       value: "Connect with me",
-      href: "https://linkedin.com/in/raviteja-yarramsetti"
+      href: "https://www.linkedin.com/in/raviteja-yarramsetti"
     },
     {
       icon: Github,
       title: "GitHub",
-      value: "View my repositories",
-      href: "https://github.com/raviteja-yarramsetti"
+      value: "rt2109",
+      href: "https://github.com/rt2109"
     }
   ];
 
