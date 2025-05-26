@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -5,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, Github, Linkedin, MapPin, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -13,11 +15,35 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent successfully! I'll get back to you soon.");
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsLoading(true);
+
+    try {
+      const result = await emailjs.send(
+        'service_qk3frtr', // service ID
+        '-1JUpipZtOJotNaI9', // template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Raviteja Yarramsetti',
+        },
+        '-1JUpipZtOJotNaI9' // public key
+      );
+
+      console.log('Email sent successfully:', result);
+      toast.success("Message sent successfully! I'll get back to you soon.");
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      console.error('Email sending failed:', error);
+      toast.error("Failed to send message. Please try again or contact me directly.");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -137,6 +163,7 @@ const Contact = () => {
                     placeholder="Enter your name"
                     className="bg-white/10 border-white/20 text-white placeholder:text-purple-200 focus:border-purple-400"
                     required
+                    disabled={isLoading}
                   />
                 </div>
                 <div>
@@ -152,6 +179,7 @@ const Contact = () => {
                     placeholder="Enter your email"
                     className="bg-white/10 border-white/20 text-white placeholder:text-purple-200 focus:border-purple-400"
                     required
+                    disabled={isLoading}
                   />
                 </div>
               </div>
@@ -168,6 +196,7 @@ const Contact = () => {
                   placeholder="What's this about?"
                   className="bg-white/10 border-white/20 text-white placeholder:text-purple-200 focus:border-purple-400"
                   required
+                  disabled={isLoading}
                 />
               </div>
               
@@ -184,15 +213,17 @@ const Contact = () => {
                   rows={5}
                   className="bg-white/10 border-white/20 text-white placeholder:text-purple-200 focus:border-purple-400 resize-none"
                   required
+                  disabled={isLoading}
                 />
               </div>
               
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-yellow-300 to-orange-400 hover:from-yellow-400 hover:to-orange-500 text-purple-900 font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="w-full bg-gradient-to-r from-yellow-300 to-orange-400 hover:from-yellow-400 hover:to-orange-500 text-purple-900 font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                disabled={isLoading}
               >
                 <Send size={16} className="mr-2" />
-                Send Message
+                {isLoading ? 'Sending...' : 'Send Message'}
               </Button>
             </form>
           </div>
