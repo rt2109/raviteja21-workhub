@@ -1,17 +1,15 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Zap, Sun } from "lucide-react";
-
 const Hero = () => {
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+  return <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
@@ -39,13 +37,11 @@ const Hero = () => {
 
             {/* Subtitle */}
             <div className="mb-6">
-              <p className="text-2xl lg:text-3xl font-semibold mb-2 text-purple-100">
-                Electrical Engineer & Developer
-              </p>
+              <p className="text-2xl lg:text-3xl font-semibold mb-2 text-purple-100"> Engineer & Developer</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-sm border border-white/20">Python</span>
                 <span className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-sm border border-white/20">AWS DevOps</span>
-                <span className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-sm border border-white/20">Solar PV</span>
+                <span className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-sm border border-white/20">Web Development</span>
               </div>
             </div>
 
@@ -57,17 +53,11 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button 
-                onClick={scrollToContact}
-                className="bg-white text-purple-600 hover:bg-purple-50 px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group"
-              >
+              <Button onClick={scrollToContact} className="bg-white text-purple-600 hover:bg-purple-50 px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group">
                 Get In Touch
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button 
-                variant="outline"
-                className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 backdrop-blur-md"
-              >
+              <Button variant="outline" className="border-white/30 hover:bg-white/10 px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 backdrop-blur-md text-gray-900">
                 View Projects
               </Button>
             </div>
@@ -83,11 +73,7 @@ const Hero = () => {
                 
                 {/* Profile Image Circle */}
                 <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full relative overflow-hidden shadow-2xl">
-                  <img 
-                    src="https://i.postimg.cc/YqnvcJ0G/professional-pic-of-me.webp"
-                    alt="Raviteja Yarramsetti - Profile Picture"
-                    className="w-full h-full object-cover object-center"
-                  />
+                  <img src="https://i.postimg.cc/YqnvcJ0G/professional-pic-of-me.webp" alt="Raviteja Yarramsetti - Profile Picture" className="w-full h-full object-cover object-center" />
                   
                   {/* Subtle Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
@@ -106,10 +92,15 @@ const Hero = () => {
               </div>
 
               {/* Orbital Elements */}
-              <div className="absolute inset-0 animate-spin" style={{ animationDuration: '20s' }}>
+              <div className="absolute inset-0 animate-spin" style={{
+              animationDuration: '20s'
+            }}>
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white/50 rounded-full"></div>
               </div>
-              <div className="absolute inset-0 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}>
+              <div className="absolute inset-0 animate-spin" style={{
+              animationDuration: '15s',
+              animationDirection: 'reverse'
+            }}>
                 <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-purple-300/70 rounded-full"></div>
               </div>
             </div>
@@ -124,8 +115,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
