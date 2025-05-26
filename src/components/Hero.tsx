@@ -81,12 +81,15 @@ const Hero = () => {
                 {/* Animated Border */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 opacity-20 animate-pulse"></div>
                 
-                {/* Inner Circle */}
-                <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-gradient-to-br from-purple-300 via-blue-400 to-indigo-500 flex items-center justify-center relative overflow-hidden shadow-2xl">
-                  {/* Initials */}
-                  <div className="text-white text-6xl lg:text-7xl font-bold tracking-wider">RY</div>
+                {/* Profile Image Circle */}
+                <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full relative overflow-hidden shadow-2xl">
+                  <img 
+                    src="https://i.postimg.cc/YqnvcJ0G/professional-pic-of-me.webp"
+                    alt="Raviteja Yarramsetti - Profile Picture"
+                    className="w-full h-full object-cover object-center"
+                  />
                   
-                  {/* Subtle Pattern Overlay */}
+                  {/* Subtle Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
                 </div>
               </div>
