@@ -1,10 +1,7 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { GraduationCap, User, Target } from "lucide-react";
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 px-6">
+  return <section id="about" className="py-20 px-6">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">About Me</h2>
@@ -62,10 +59,7 @@ const About = () => {
             <div className="bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-white mb-6">My Journey</h3>
               <div className="space-y-4 text-purple-100">
-                <p>
-                  As a recent Electrical Engineering graduate, I've developed a unique blend of 
-                  traditional electrical engineering knowledge and modern software development skills.
-                </p>
+                <p>As a recent Engineering graduate, I've developed a unique blend of traditional electrical engineering knowledge and modern software development skills.</p>
                 <p>
                   My passion lies in the intersection of hardware and software, particularly in 
                   areas like IoT systems, cloud infrastructure, and renewable energy solutions.
@@ -88,8 +82,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
