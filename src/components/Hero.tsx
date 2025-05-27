@@ -1,5 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Zap, Sun } from "lucide-react";
+
 const Hero = () => {
   const scrollToContact = () => {
     const element = document.getElementById('contact');
@@ -9,7 +11,9 @@ const Hero = () => {
       });
     }
   };
-  return <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
+
+  return (
+    <section id="home" className="min-h-screen flex items-center justify-center pt-20 px-6 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
@@ -37,7 +41,7 @@ const Hero = () => {
 
             {/* Subtitle */}
             <div className="mb-6">
-              <p className="text-2xl lg:text-3xl font-semibold mb-2 text-purple-100"> Engineer & Developer</p>
+              <p className="text-2xl lg:text-3xl font-semibold mb-2 text-purple-100"> Engineer & Developer</p>
               <div className="flex flex-wrap gap-2 mb-4">
                 <span className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-sm border border-white/20">Python</span>
                 <span className="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-sm border border-white/20">AWS DevOps</span>
@@ -57,24 +61,25 @@ const Hero = () => {
                 Get In Touch
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              
             </div>
           </div>
           
-          {/* Enhanced Profile Section */}
+          {/* Enhanced Profile Section - Removed circular decorations */}
           <div className="lg:w-1/2 flex justify-center lg:justify-end">
             <div className="relative group">
-              {/* Main Profile Circle */}
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-white/20 to-white/5 backdrop-blur-xl border border-white/30 flex items-center justify-center relative overflow-hidden group-hover:scale-105 transition-all duration-500">
-                {/* Animated Border */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 opacity-20 animate-pulse"></div>
-                
-                {/* Profile Image Circle */}
-                <div className="w-72 h-72 lg:w-88 lg:h-88 rounded-full relative overflow-hidden shadow-2xl">
-                  <img src="https://i.postimg.cc/YqnvcJ0G/professional-pic-of-me.webp" alt="Raviteja Yarramsetti - Profile Picture" className="w-full h-full object-cover object-center" />
-                  
-                  {/* Subtle Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+              {/* Simplified Profile Image - No circular background */}
+              <div className="w-80 h-80 lg:w-96 lg:h-96 relative overflow-hidden group-hover:scale-105 transition-all duration-500 rounded-3xl shadow-2xl">
+                {/* Enhanced border effect */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 p-1">
+                  <div className="w-full h-full rounded-3xl overflow-hidden">
+                    <img 
+                      src="https://i.postimg.cc/YqnvcJ0G/professional-pic-of-me.webp" 
+                      alt="Raviteja Yarramsetti - Profile Picture" 
+                      className="w-full h-full object-cover object-center" 
+                    />
+                    {/* Subtle overlay for better contrast */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                  </div>
                 </div>
               </div>
               
@@ -88,26 +93,12 @@ const Hero = () => {
               <div className="absolute bottom-1/4 -right-8 w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center shadow-xl animate-bounce delay-700 group-hover:animate-pulse">
                 <Code className="text-white w-6 h-6" />
               </div>
-
-              {/* Orbital Elements */}
-              <div className="absolute inset-0 animate-spin" style={{
-              animationDuration: '20s'
-            }}>
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white/50 rounded-full"></div>
-              </div>
-              <div className="absolute inset-0 animate-spin" style={{
-              animationDuration: '15s',
-              animationDirection: 'reverse'
-            }}>
-                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-2 h-2 bg-purple-300/70 rounded-full"></div>
-              </div>
             </div>
           </div>
         </div>
-
-        {/* Scroll Indicator */}
-        
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;
