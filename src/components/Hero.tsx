@@ -57,9 +57,7 @@ const Hero = () => {
                 Get In Touch
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" className="border-white/30 hover:bg-white/10 px-8 py-6 text-lg font-semibold rounded-full transition-all duration-300 backdrop-blur-md text-gray-900">
-                View Projects
-              </Button>
+              
             </div>
           </div>
           
