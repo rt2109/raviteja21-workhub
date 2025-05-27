@@ -21,10 +21,12 @@ const Contact = () => {
     e.preventDefault();
     setIsLoading(true);
 
+    console.log('Sending email with data:', formData);
+
     try {
       const result = await emailjs.send(
         'service_qk3frtr', // service ID
-        '-1JUpipZtOJotNaI9', // template ID
+        'template_eozr7ap', // template ID (corrected)
         {
           from_name: formData.name,
           from_email: formData.email,
