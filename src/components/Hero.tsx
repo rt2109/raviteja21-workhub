@@ -77,8 +77,6 @@ const Hero = () => {
                       alt="Raviteja Yarramsetti - Profile Picture" 
                       className="w-full h-full object-cover object-center" 
                     />
-                    {/* Subtle overlay for better contrast */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
                 </div>
               </div>
