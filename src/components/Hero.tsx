@@ -73,10 +73,10 @@ const Hero = () => {
                 {/* Enhanced border effect */}
                 <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 p-1">
                   <div className="w-full h-full rounded-3xl overflow-hidden">
-                    <img 
-                      src="https://i.postimg.cc/YqnvcJ0G/professional-pic-of-me.webp" 
-                      alt="Raviteja Yarramsetti - Profile Picture" 
-                      className="w-full h-full object-cover object-center" 
+                    <img
+                      src={profileAsset.url}
+                      alt="Raviteja Yarramsetti - Profile Picture"
+                      className="w-full h-full object-cover object-center"
                     />
                   </div>
                 </div>
