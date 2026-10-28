@@ -1,9 +1,15 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, Cloud, Zap, Cpu } from "lucide-react";
+import { Code, Cloud, Zap, Cpu, Users } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
+    {
+      icon: Users,
+      title: "US IT & Non-IT Recruitment",
+      skills: ["End-to-End Recruitment", "Technical Sourcing", "Candidate Screening", "W2 / C2H / C2C / Full-Time", "ATS (Ceipal)", "Client Coordination"],
+      color: "from-pink-400 to-rose-500"
+    },
     {
       icon: Code,
       title: "Programming & Development",
@@ -50,7 +56,7 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {skillCategories.map((category, index) => (
             <Card key={index} className="bg-white/10 backdrop-blur-lg border-white/20 hover:bg-white/15 transition-all duration-300 transform hover:scale-105">
               <CardContent className="p-6">
