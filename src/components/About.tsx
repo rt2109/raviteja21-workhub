@@ -61,6 +61,9 @@ const About = () => {
               <div className="space-y-4 text-purple-100">
                 <p>As a recent Engineering graduate, I've developed a unique blend of traditional electrical engineering knowledge and modern software development skills.</p>
                 <p>
+                  I currently work as a US IT & Non-IT Recruiter, managing end-to-end hiring across Energy, Aerospace, IT, Cloud, and Medical domains — alongside hands-on experience in cloud engineering and solar power systems.
+                </p>
+                <p>
                   My passion lies in the intersection of hardware and software, particularly in 
                   areas like IoT systems, cloud infrastructure, and renewable energy solutions.
                 </p>

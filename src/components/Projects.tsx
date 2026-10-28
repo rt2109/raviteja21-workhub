@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github, Volume2, Sun } from "lucide-react";
+import { ExternalLink, Github, Volume2, Sun, Wifi } from "lucide-react";
 const Projects = () => {
   const projects = [{
     icon: Volume2,

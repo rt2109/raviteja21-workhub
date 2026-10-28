@@ -1,9 +1,15 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, Cloud, Zap, Cpu } from "lucide-react";
+import { Code, Cloud, Zap, Cpu, Users } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
+    {
+      icon: Users,
+      title: "US IT & Non-IT Recruitment",
+      skills: ["End-to-End Recruitment", "Technical Sourcing", "Candidate Screening", "W2 / C2H / C2C / Full-Time", "ATS (Ceipal)", "Client Coordination"],
+      color: "from-pink-400 to-rose-500"
+    },
     {
       icon: Code,
       title: "Programming & Development",
