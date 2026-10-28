@@ -18,6 +18,14 @@ const Projects = () => {
     features: ["Voltage sag compensation", "Power quality enhancement", "Dynamic performance evaluation", "Grid integration analysis"],
     category: "Power Systems",
     color: "from-yellow-400 to-orange-500"
+  }, {
+    icon: Wifi,
+    title: "Smart Energy Meter Using IoT",
+    description: "Developed a real-time energy monitoring concept for current, voltage, and power measurements using ESP32 with Wi-Fi communication and a Python-based backend.",
+    technologies: ["IoT", "ESP32", "Python", "HTTP/MQTT", "Wi-Fi"],
+    features: ["Real-time current, voltage & power measurement", "ESP32-based sensing unit", "Wi-Fi data transfer via HTTP/MQTT", "Python backend for data collection and visualization"],
+    category: "IoT / Embedded Systems",
+    color: "from-green-400 to-emerald-600"
   }];
   return <section id="projects" className="py-20 px-6">
       <div className="container mx-auto">

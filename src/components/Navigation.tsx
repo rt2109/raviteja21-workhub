@@ -23,7 +23,7 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
-            {['Home', 'About', 'Skills', 'Services', 'Projects', 'Contact'].map((item) => (
+            {['Home', 'About', 'Experience', 'Skills', 'Services', 'Projects', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -47,7 +47,7 @@ const Navigation = () => {
         {isOpen && (
           <div className="md:hidden mt-4 pb-4">
             <div className="flex flex-col space-y-3">
-              {['Home', 'About', 'Skills', 'Services', 'Projects', 'Contact'].map((item) => (
+              {['Home', 'About', 'Experience', 'Skills', 'Services', 'Projects', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
