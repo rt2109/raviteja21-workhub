@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Code, Zap, Sun } from "lucide-react";
-import profileAsset from "@/assets/profile.png.asset.json";
+import profileAsset from "@/assets/profile.webp.asset.json";
 
 const Hero = () => {
   const scrollToContact = () => {
